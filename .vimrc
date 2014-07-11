@@ -51,6 +51,7 @@ endif
 call pathogen#infect()              " Init pathogen
 syntax on                           " enable syntax highlighting
 
+let NERDTreeShowHidden=1
 map <C-n> :NERDTreeToggle<CR>
 
 " $VIMRUNTIME/rgb.txt

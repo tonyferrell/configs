@@ -26,8 +26,9 @@ set directory=.,$TEMP
 
 " Configure GUI settings
 if has("gui_running")
-    " Settings for windowed mode
-    " ==========================
+
+    set noerrorbells visualbell t_vb=
+    autocmd GUIEnter * set visualbell t_vb=
 
     " Maximize the window
     au GUIEnter * simalt ~x

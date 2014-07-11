@@ -30,7 +30,7 @@ if has("gui_running")
     " ==========================
 
     " Maximize the window
-    simalt ~X
+    au GUIEnter * simalt ~x
 
     " Set the font based on OS
     if has("gui_macvim")

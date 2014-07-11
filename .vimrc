@@ -41,7 +41,7 @@ if has("gui_running")
     endif
 
     " Dark background
-    :highlight Normal guibg=gray22 guifg=White
+    :highlight Normal guibg=#222222 guifg=White
 else
     " Settings for non-windowed mode
     " ==============================

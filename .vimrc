@@ -22,6 +22,7 @@ if has('win32') || has('win64')
     set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
 endif
 
+set directory=.,$TEMP
 
 " Configure GUI settings
 if has("gui_running")
@@ -45,7 +46,6 @@ else
     " Settings for non-windowed mode
     " ==============================
 
-"    set term=ansi                       " 
 endif
 
 call pathogen#infect()              " Init pathogen

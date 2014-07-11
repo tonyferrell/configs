@@ -30,14 +30,13 @@ if has("gui_running")
     " ==========================
 
     " Maximize the window
-    set guifont=Consolas
     simalt ~X
 
     " Set the font based on OS
     if has("gui_macvim")
         set guifont=Menlo\ Regular:h14
     elseif has("gui_win32")
-        set guifont=Consolas
+        set guifont=Consolas:h14
     endif
 
     " Dark background

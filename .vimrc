@@ -41,11 +41,13 @@ if has("gui_running")
     endif
 
     " Dark background
-    :highlight Normal guibg=#222222 guifg=White
+    highlight Normal guibg=#222222 guifg=White
+    colorscheme xoria256
 else
     " Settings for non-windowed mode
     " ==============================
 
+    colorscheme desert
 endif
 
 call pathogen#infect()              " Init pathogen

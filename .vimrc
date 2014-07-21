@@ -32,6 +32,8 @@ set tabstop=4
 set shiftwidth=4
 set sts=4
 
+set list listchars=tab:→\ ,trail:·
+
 inoremap <C-k> <Esc>                " CTRL+K to escape
 nnoremap ;; A;<Esc>                 " ;; to add a semicolon to the end of the line
 

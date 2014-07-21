@@ -21,6 +21,8 @@ Plugin 'moll/vim-node'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-sleuth'
 Plugin 'xoria256.vim'
+Plugin 'danro/rename.vim'
+Plugin 'tpope/vim-fugitive'
 call vundle#end()
 filetype plugin indent on
 

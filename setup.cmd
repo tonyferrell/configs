@@ -1,9 +1,28 @@
-echo run elevated
+set _tempvbs=%LocalAppData%\getadmin.vbs
 
-mklink /D %USERPROFILE%\.vim %USERPROFILE%\dot-files\.vim
+:: Check for admin permissions
+Net Session >nul 2>&1
+:: If error flag set, we do not have admin.
+If ERRORLEVEL 1 (
+   Echo Requesting administrative privileges...
+   Goto sub_elevate
+) Else ( Goto sub_main )
 
-mklink %USERPROFILE%\.vimrc %USERPROFILE%\dot-files\.vimrc
+:sub_elevate
 
-git submodule update --install
+   echo Set objShell = CreateObject^("Shell.Application"^) > %_tempvbs%
+   echo objShell.ShellExecute "%~f0", "", "", "runas", 1 >> %_tempvbs%
+   cscript "%_tempvbs%" //nologo
+   Exit /B
 
-vim +PluginInstall +qall
+:sub_main
+
+   if exist "%_tempvbs%" ( Del "%_tempvbs%" )
+
+   mklink /D %USERPROFILE%\.vim %USERPROFILE%\dot-files\.vim
+
+   mklink %USERPROFILE%\.vimrc %USERPROFILE%\dot-files\.vimrc
+
+   git submodule update --install
+
+   vim +PluginInstall +qall

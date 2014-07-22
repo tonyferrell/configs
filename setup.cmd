@@ -19,10 +19,16 @@ If ERRORLEVEL 1 (
 
    if exist "%_tempvbs%" ( Del "%_tempvbs%" )
 
-   mklink /D %USERPROFILE%\.vim %USERPROFILE%\dot-files\.vim
+   pushd %USERPROFILE%\dot-files
 
-   mklink %USERPROFILE%\.vimrc %USERPROFILE%\dot-files\.vimrc
+   if not exist ".vim\bundle\Vundle.vim" ( git clone git@github.com:gmarik/Vundle.vim.git .vim\bundle\Vundle.vim )
 
-   git submodule update --install
+   if not exist "%USERPROFILE%\.vim" ( mklink /D %USERPROFILE%\.vim %USERPROFILE%\dot-files\.vim )
+
+   if not exist "%USERPROFILE%\.vimrc" (mklink %USERPROFILE%\.vimrc %USERPROFILE%\dot-files\.vimrc )
+
+   pause
 
    vim +PluginInstall +qall
+
+   pause

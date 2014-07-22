@@ -42,10 +42,11 @@ map <C-J> <C-w>j<C-w>_
 map <C-K> <C-w>k<C-w>_
 
 " Move horizontally in the window through the vertical splits...
-map <C-H> <C-w>h<C-w>\|
-map <C-L> <C-w>l<C-w>\|
+map <C-H> <C-w>h80<C-w>\|
+map <C-L> <C-w>l80<C-w>\|
 
 map <C-E> <C-w>=
+map <C-8> 80<C-w>\|
 
 set directory=.,$TEMP
 

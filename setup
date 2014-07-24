@@ -1,0 +1,8 @@
+script_dir=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+
+if [[ `uname` == MINGW* ]]; then
+    cmd //c ${script_dir}/setup.cmd
+    exit
+fi
+
+echo "TODO: *nix setup"

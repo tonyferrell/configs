@@ -26,6 +26,9 @@ If ERRORLEVEL 1 (
    if not exist "%USERPROFILE%\.vim" ( mklink /D %USERPROFILE%\.vim %USERPROFILE%\dot-files\.vim )
 
    if not exist "%USERPROFILE%\.vimrc" (mklink %USERPROFILE%\.vimrc %USERPROFILE%\dot-files\.vimrc )
+   if not exist "%USERPROFILE%\.bashrc" (mklink %USERPROFILE%\.bashrc %USERPROFILE%\dot-files\.bashrc)
+   if not exist "%USERPROFILE%\.bash_profile" (mklink %USERPROFILE%\.bash_profile %USERPROFILE%\dot-files\.bash_profile)
+   if not exist "%USERPROFILE%\.azure-completion.sh" (mklink %USERPROFILE%\.azure-completion.sh %USERPROFILE%\dot-files\.azure-completion.sh)
 
    pause
 

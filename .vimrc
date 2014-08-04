@@ -3,10 +3,7 @@ set nocompatible                    " full vim
 filetype off
 set encoding=utf8                   " utf8 default encoding
 set number                          " Show line numbers
-set ruler                           " Show current position
-set smartindent                     " Smart indentation
 set lines=60 columns=120            " Inital size
-syntax on                           " enable syntax highlighting
 
 " Use ~/.vim instead of ~/vimfiles on Windows
 " Makes it easier to sync settings across machines

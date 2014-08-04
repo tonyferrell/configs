@@ -58,6 +58,12 @@ if has("gui_running")
     " Set the font based on OS
     if has("gui_win32")
         set guifont=Consolas:h14
+
+        set directory=$HOME/.vim/swap//     " Location for swap files
+        set backupdir=$HOME/.vim/swap//     " Location for backup files
+    else
+        set directory=~/.vim/swap//         " Location for swap files
+        set backupdir=~/.vim/swap//         " Location for backup files
     endif
 
     " Dark background

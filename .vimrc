@@ -49,9 +49,6 @@ map <C-8> 80<C-w>\|
 
 set directory=.,$TEMP
 
-let NERDTreeShowHidden=1
-map <C-n> :NERDTreeToggle<CR>
-
 " Configure GUI settings
 if has("gui_running")
 

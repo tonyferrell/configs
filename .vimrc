@@ -1,9 +1,12 @@
-" Show line numbers
 set nocompatible                    " full vim
+
 filetype off
 set encoding=utf8                   " utf8 default encoding
 set number                          " Show line numbers
 set ruler                           " Show current position
+set smartindent                     " Smart indentation
+set lines=60 columns=120            " Inital size
+syntax on                           " enable syntax highlighting
 
 " Use ~/.vim instead of ~/vimfiles on Windows
 " Makes it easier to sync settings across machines
@@ -34,7 +37,6 @@ set sts=4
 
 set list listchars=tab:→\ ,trail:·
 
-inoremap <C-k> <Esc>                " CTRL+K to escape
 nnoremap ;; A;<Esc>                 " ;; to add a semicolon to the end of the line
 
 " Move vertically in the window through the horizontal splits...
@@ -50,19 +52,17 @@ map <C-8> 80<C-w>\|
 
 set directory=.,$TEMP
 
+let NERDTreeShowHidden=1
+map <C-n> :NERDTreeToggle<CR>
+
 " Configure GUI settings
 if has("gui_running")
 
     set noerrorbells visualbell t_vb=
     autocmd GUIEnter * set visualbell t_vb=
 
-    " Maximize the window
-    au GUIEnter * simalt ~x
-
     " Set the font based on OS
-    if has("gui_macvim")
-        set guifont=Menlo\ Regular:h14
-    elseif has("gui_win32")
+    if has("gui_win32")
         set guifont=Consolas:h14
     endif
 
@@ -76,8 +76,15 @@ else
     colorscheme desert
 endif
 
-"call pathogen#infect()              " Init pathogen
-syntax on                           " enable syntax highlighting
+function! ToggleGUICruft()
+  if &guioptions=='r'
+    exec('set guioptions=imTrL')
+  else
+    exec('set guioptions=r')
+  endif
+endfunction
 
-let NERDTreeShowHidden=1
-map <C-n> :NERDTreeToggle<CR>
+map <F11> <Esc>:call ToggleGUICruft()<cr>
+
+" by default, hide gui menus
+set guioptions=r

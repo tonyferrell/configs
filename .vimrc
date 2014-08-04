@@ -14,23 +14,23 @@ endif
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'moll/vim-node'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-sleuth'
+Plugin 'tpope/vim-fugitive'
 Plugin 'xoria256.vim'
 Plugin 'danro/rename.vim'
-Plugin 'tpope/vim-fugitive'
 call vundle#end()
 filetype plugin indent on
 
 " Tabs to spaces
 set expandtab
+
 set tabstop=4
-set shiftwidth=4
 set sts=4
+set shiftwidth=4
 
 set list listchars=tab:→\ ,trail:·
 

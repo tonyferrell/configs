@@ -24,7 +24,7 @@ if not exist %swapDir% (
 
 if not exist ".vim\bundle\Vundle.vim" (
   echo "Cloning Vundle into .vim/bundle/Vundle.vim"
-  git clone git@github.com:gmarik/Vundle.vim.git .vim\bundle\Vundle.vim
+  git clone https://github.com/gmarik/Vundle.vim.git .vim\bundle\Vundle.vim
 )
 
 call :link_if_missing ".vimrc" %USERPROFILE% %fileRoot%

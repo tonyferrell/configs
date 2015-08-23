@@ -28,6 +28,7 @@ if not exist ".vim\bundle\Vundle.vim" (
 )
 
 call :link_if_missing ".vimrc" %USERPROFILE% %fileRoot%
+call :link_if_missing ".gvimrc" %USERPROFILE% %fileRoot%
 call :link_if_missing ".bash_profile" %USERPROFILE% %fileRoot%
 call :link_if_missing ".bashrc" %USERPROFILE% %fileRoot%
 call :link_if_missing ".vim" %USERPROFILE% %fileRoot%

@@ -9,5 +9,9 @@ It is currently only tested on Windows, but I would be happy to incorporate any 
 
 Depends on Vundle and therefore git.
 
+Setup
+-----
+Run setup.cmd to ... you know ... set it up.
+
 My vim configurations
 ---------------------

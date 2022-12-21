@@ -1,17 +1,16 @@
-dot-files
-=========
-Intro
------
+# Configs
+Major update, December 21, 2022. This repo is now mostly configs for mac/osx.
 
-The dot-files repository allows you to persist your standard vim configuration across multiple machines.
+Contains configs for:
+  * neovim
+  * git
+  * tmux
 
-It is currently only tested on Windows, but I would be happy to incorporate any changes needed to get it working reliably on a *nix host.
+## Setup
+Symlink directories into `~/.configs`
 
-Depends on Vundle and therefore git.
+TODO: Run nvim plugin install
 
-Setup
------
-Run setup.cmd to ... you know ... set it up.
+## Credits
+Updated configs draw heavily (or are direct plagerisms of) https://github.com/jonhoo/configs
 
-My vim configurations
----------------------

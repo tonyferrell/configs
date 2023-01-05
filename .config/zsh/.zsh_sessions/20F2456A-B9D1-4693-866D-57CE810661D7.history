@@ -1,0 +1,46 @@
+ln -s ~/code/configs/.config/zsh ~/.config/zsh
+ls
+cd $ZDOTDIR
+ls
+ls -l
+ls
+pwd
+cat zsh
+ls
+cd zsh
+ls
+ls
+ll
+ls -l
+ls -la
+pwd
+mv .zshrc ..
+ls
+cd ..
+ls
+rm -rf zsh
+ls
+ls -l
+ls -la
+pwd
+git status
+ls
+pwd
+cd ..
+git status
+ls -l
+rm zsh
+rm -rf zsh
+ls
+ln -s ~/code/configs/.config/zsh ~/.config/
+ls
+cd zsh
+ls
+ls
+pwd
+ls -l
+ls -la
+zsh
+ls
+ll
+ls

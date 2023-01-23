@@ -1,2 +1,4 @@
 .vim/bundle/
 .vim/swap/
+.zsh_sessions/
+.zcompdump
